@@ -1,22 +1,30 @@
 import React from 'react'
 import useFetch from '../hooks/useFetch'
 
-const CardResident = ({url}) => {
+const CardResident = ({ url }) => {
   const resident = useFetch(url)
   console.log(resident);
+
+
+  let circle
+  if (resident?.status === 'Alive') {
+    circle = 'circle_green'
+  } if (resident?.status === 'Dead') {
+    circle = 'circle_red'
+  }
 
   return (
     <article className='card'>
       <header>
-        
+
         <img className='img' src={resident?.image} alt={`image of ${resident?.name}`} />
         <div>
-          <div className="circle"></div>
+          <div className={circle}></div>
           <span>{resident?.status}</span>
         </div>
       </header>
       <div>
-        <h3  className='card_list'>{resident?.name}</h3>
+        <h3 className='card_list'>{resident?.name}</h3>
         <ul className='card_list'>
           <li>
             <span>Specie: </span>

@@ -88,3 +88,15 @@ input{
 .img{
     width: 200px;
 }
+.circle_red{
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+.circle_green{
+    background-color: green;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
