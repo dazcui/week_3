@@ -27,11 +27,11 @@ function App() {
   const handleSubmit = e => {
     e.preventDefault()
     setSearchInput(e.target.search.value)
-
   }
-  // console.log(searchInput);
 
 
+
+  // console.log(searchInput)
   return (
     <div className="App">
       <div className='header_first'>
